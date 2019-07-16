@@ -23,11 +23,9 @@ struct MainView : View {
                 .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
             
             List {
-                Text("Test 1")
-                Text("Test 2")
-                Text("Test 3")
-            }
-            .navigationBarTitle(Text("Search"))
+                RepositoryView(repository: Repository(name: "RepositoryName", description: "Description", stargazers: .init(totalCount: 100), url: URL(string: "https://github.com")!))
+                }
+                .navigationBarTitle(Text("Search"))
         }
     }
 }

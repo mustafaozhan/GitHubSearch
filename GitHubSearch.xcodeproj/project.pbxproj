@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C31A89D22DE710500600208 /* RepositoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C31A89C22DE710500600208 /* RepositoryView.swift */; };
 		5C66622F22DE5FB800244AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66622E22DE5FB800244AAB /* AppDelegate.swift */; };
 		5C66623122DE5FB800244AAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623022DE5FB800244AAB /* SceneDelegate.swift */; };
 		5C66623422DE5FB800244AAB /* GitHubSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623222DE5FB800244AAB /* GitHubSearch.xcdatamodeld */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C31A89C22DE710500600208 /* RepositoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryView.swift; sourceTree = "<group>"; };
 		5C66622B22DE5FB800244AAB /* GitHubSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C66622E22DE5FB800244AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C66623022DE5FB800244AAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,7 +64,7 @@
 			children = (
 				5C66624522DE604200244AAB /* App */,
 				5C66624822DE6AD000244AAB /* Model */,
-				5C66624722DE60BF00244AAB /* Main */,
+				5C66624722DE60BF00244AAB /* View */,
 				5C66624622DE608F00244AAB /* Resources */,
 				5C66623922DE5FB900244AAB /* Preview Content */,
 			);
@@ -97,12 +99,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		5C66624722DE60BF00244AAB /* Main */ = {
+		5C66624722DE60BF00244AAB /* View */ = {
 			isa = PBXGroup;
 			children = (
 				5C66623522DE5FB800244AAB /* MainView.swift */,
+				5C31A89C22DE710500600208 /* RepositoryView.swift */,
 			);
-			path = Main;
+			path = View;
 			sourceTree = "<group>";
 		};
 		5C66624822DE6AD000244AAB /* Model */ = {
@@ -186,6 +189,7 @@
 			files = (
 				5C66622F22DE5FB800244AAB /* AppDelegate.swift in Sources */,
 				5C66623422DE5FB800244AAB /* GitHubSearch.xcdatamodeld in Sources */,
+				5C31A89D22DE710500600208 /* RepositoryView.swift in Sources */,
 				5C66624A22DE6AFD00244AAB /* Repository.swift in Sources */,
 				5C66623622DE5FB800244AAB /* MainView.swift in Sources */,
 				5C66623122DE5FB800244AAB /* SceneDelegate.swift in Sources */,
