@@ -10,7 +10,7 @@
 		5C66622F22DE5FB800244AAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66622E22DE5FB800244AAB /* AppDelegate.swift */; };
 		5C66623122DE5FB800244AAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623022DE5FB800244AAB /* SceneDelegate.swift */; };
 		5C66623422DE5FB800244AAB /* GitHubSearch.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623222DE5FB800244AAB /* GitHubSearch.xcdatamodeld */; };
-		5C66623622DE5FB800244AAB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623522DE5FB800244AAB /* ContentView.swift */; };
+		5C66623622DE5FB800244AAB /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C66623522DE5FB800244AAB /* MainView.swift */; };
 		5C66623822DE5FB900244AAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C66623722DE5FB900244AAB /* Assets.xcassets */; };
 		5C66623B22DE5FB900244AAB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C66623A22DE5FB900244AAB /* Preview Assets.xcassets */; };
 		5C66623E22DE5FB900244AAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C66623C22DE5FB900244AAB /* LaunchScreen.storyboard */; };
@@ -21,7 +21,7 @@
 		5C66622E22DE5FB800244AAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C66623022DE5FB800244AAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5C66623322DE5FB800244AAB /* GitHubSearch.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GitHubSearch.xcdatamodel; sourceTree = "<group>"; };
-		5C66623522DE5FB800244AAB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5C66623522DE5FB800244AAB /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		5C66623722DE5FB900244AAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C66623A22DE5FB900244AAB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C66623D22DE5FB900244AAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,13 +58,9 @@
 		5C66622D22DE5FB800244AAB /* GitHubSearch */ = {
 			isa = PBXGroup;
 			children = (
-				5C66622E22DE5FB800244AAB /* AppDelegate.swift */,
-				5C66623022DE5FB800244AAB /* SceneDelegate.swift */,
-				5C66623522DE5FB800244AAB /* ContentView.swift */,
-				5C66623722DE5FB900244AAB /* Assets.xcassets */,
-				5C66623C22DE5FB900244AAB /* LaunchScreen.storyboard */,
-				5C66623F22DE5FB900244AAB /* Info.plist */,
-				5C66623222DE5FB800244AAB /* GitHubSearch.xcdatamodeld */,
+				5C66624522DE604200244AAB /* App */,
+				5C66624722DE60BF00244AAB /* Main */,
+				5C66624622DE608F00244AAB /* Resources */,
 				5C66623922DE5FB900244AAB /* Preview Content */,
 			);
 			path = GitHubSearch;
@@ -76,6 +72,34 @@
 				5C66623A22DE5FB900244AAB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C66624522DE604200244AAB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5C66623022DE5FB800244AAB /* SceneDelegate.swift */,
+				5C66622E22DE5FB800244AAB /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5C66624622DE608F00244AAB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5C66623722DE5FB900244AAB /* Assets.xcassets */,
+				5C66623C22DE5FB900244AAB /* LaunchScreen.storyboard */,
+				5C66623F22DE5FB900244AAB /* Info.plist */,
+				5C66623222DE5FB800244AAB /* GitHubSearch.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5C66624722DE60BF00244AAB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5C66623522DE5FB800244AAB /* MainView.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +175,7 @@
 			files = (
 				5C66622F22DE5FB800244AAB /* AppDelegate.swift in Sources */,
 				5C66623422DE5FB800244AAB /* GitHubSearch.xcdatamodeld in Sources */,
-				5C66623622DE5FB800244AAB /* ContentView.swift in Sources */,
+				5C66623622DE5FB800244AAB /* MainView.swift in Sources */,
 				5C66623122DE5FB800244AAB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +316,7 @@
 				DEVELOPMENT_ASSET_PATHS = "GitHubSearch/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8MTR5SHZFD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				INFOPLIST_FILE = GitHubSearch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +336,7 @@
 				DEVELOPMENT_ASSET_PATHS = "GitHubSearch/Preview\\ Content";
 				DEVELOPMENT_TEAM = 8MTR5SHZFD;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = GitHubSearch/Info.plist;
+				INFOPLIST_FILE = GitHubSearch/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
