@@ -13,28 +13,14 @@ struct RepositoryView : View {
     let repository: Repository
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "doc.text")
-                Text(repository.name)
-                .bold()
-            }
-            
-            repository.description.map(Text.init)
-            
-            HStack {
-                Image(systemName: "star")
-                Text("\(repository.stargazers.totalCount)")
-            }
-        }
+        Text("")
     }
 }
 
 #if DEBUG
 struct RepositoryView_Previews : PreviewProvider {
     static var previews: some View {
-        RepositoryView(repository: Repository(name: "Repository Name", description: "Description", stargazers: .init(totalCount: 100), url: URL(string:  "https://github.com")!))
+        RepositoryView(repository: Repository(id: 1, fullName: "RepositoryName", description: "Description", stargazersCount: 100, htmlUrl: URL(string: "https://github.com")!))
     }
 }
 #endif

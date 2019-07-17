@@ -10,22 +10,39 @@ import SwiftUI
 
 struct MainView : View {
     
-    @State private var text: String = ""
+    @ObjectBinding
+    private(set) var viewModel: MainViewModel
     
     var body: some View {
         
         NavigationView {
             
-            TextField($text, placeholder: Text("Search Reposipories"), onCommit: { print(self.text) })
-                .frame(height: 40)
-                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8 ))
-                .border(Color.gray, cornerRadius: 5)
-                .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
-            
-            List {
-                RepositoryView(repository: Repository(name: "RepositoryName", description: "Description", stargazers: .init(totalCount: 100), url: URL(string: "https://github.com")!))
+            VStack {
+                
+                HStack {
+                    
+                    TextField($viewModel.text, placeholder: Text("Search Reposipories"))
+                        .frame(height: 40)
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                        .border(Color.gray, cornerRadius: 8)
+                        .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                    
+                    Button(action: { self.viewModel.search() }) {
+                        Text("Search")
+                        }
+                        .frame(height: 40)
+                        .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                        .border(Color.blue, cornerRadius: 8)
+                        .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
                 }
-                .navigationBarTitle(Text("Search"))
+                
+                List {
+                    
+                    ForEach(viewModel.repositories.identified(by: \.id)) { repository in
+                        RepositoryView(repository: repository)
+                    }
+                }
+            }
         }
     }
 }
@@ -33,7 +50,7 @@ struct MainView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MainViewModel())
     }
 }
 #endif
