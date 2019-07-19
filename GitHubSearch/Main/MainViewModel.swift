@@ -11,16 +11,34 @@ import SwiftUI
 import Combine
 
 final class MainViewModel: BindableObject {
-    var text: String = ""
+    
+    typealias SearchRepositories = (String) -> AnyPublisher<Result<[Repository], ErrorResponse>, Never>
+    
     let didChange = PassthroughSubject<MainViewModel,Never> ()
+    private let _didChange = PassthroughSubject<MainViewModel, Never>()
+    
+    private let _searchWithQuery = PassthroughSubject<String,Never>()
+    
+    private var cancellables: [AnyCancellable] = []
+    
+    var text: String = ""
+    
     
     private(set) var repositories: [Repository] = [] {
         didSet {
-            didChange.send(self)
+            _didChange.send(self)
         }
     }
     
+    private(set) var errorMessage: String? {
+        didSet {
+            _didChange.send(self)
+        }
+    }
+    
+    
+    
     func search() {
-        repositories.append(Repository(id: 1, fullName: "RepositoryName", description: "Description", stargazersCount: 100, htmlUrl: URL(string: "https://github.com")!))
+        _searchWithQuery.send(text)
     }
 }
