@@ -21,7 +21,9 @@
 		5C9144AC22E23808005543E2 /* RepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144AB22E23808005543E2 /* RepositoryAPI.swift */; };
 		5C9144AF22E238B2005543E2 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144AE22E238B2005543E2 /* URLSession.swift */; };
 		5C9144B122E23911005543E2 /* Combine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144B022E23911005543E2 /* Combine.swift */; };
-		5C9144B322E23C14005543E2 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144B222E23C14005543E2 /* Publisher.swift */; };
+		5C9144B322E23C14005543E2 /* Publisher.Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144B222E23C14005543E2 /* Publisher.Extension.swift */; };
+		5C9144B522E23E13005543E2 /* ItemResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144B422E23E13005543E2 /* ItemResponse.swift */; };
+		5C9144B722E23FA6005543E2 /* AnySubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9144B622E23FA6005543E2 /* AnySubscription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		5C9144AB22E23808005543E2 /* RepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RepositoryAPI.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Model/RepositoryAPI.swift; sourceTree = "<group>"; };
 		5C9144AE22E238B2005543E2 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = URLSession.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Extensions/URLSession.swift; sourceTree = "<group>"; };
 		5C9144B022E23911005543E2 /* Combine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Extensions/Combine.swift; sourceTree = "<group>"; };
-		5C9144B222E23C14005543E2 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Publisher.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Extensions/Publisher.swift; sourceTree = "<group>"; };
+		5C9144B222E23C14005543E2 /* Publisher.Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Publisher.Extension.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Extensions/Publisher.Extension.swift; sourceTree = "<group>"; };
+		5C9144B422E23E13005543E2 /* ItemResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemResponse.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Model/ItemResponse.swift; sourceTree = "<group>"; };
+		5C9144B622E23FA6005543E2 /* AnySubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnySubscription.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/GitHubSearch/GitHubSearch/Model/AnySubscription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 				5C66624922DE6AFD00244AAB /* Repository.swift */,
 				5C9144A922E235CF005543E2 /* ErrorResponse.swift */,
 				5C9144AB22E23808005543E2 /* RepositoryAPI.swift */,
+				5C9144B422E23E13005543E2 /* ItemResponse.swift */,
+				5C9144B622E23FA6005543E2 /* AnySubscription.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,7 +151,7 @@
 			children = (
 				5C9144AE22E238B2005543E2 /* URLSession.swift */,
 				5C9144B022E23911005543E2 /* Combine.swift */,
-				5C9144B222E23C14005543E2 /* Publisher.swift */,
+				5C9144B222E23C14005543E2 /* Publisher.Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,10 +227,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C9144B322E23C14005543E2 /* Publisher.swift in Sources */,
+				5C9144B322E23C14005543E2 /* Publisher.Extension.swift in Sources */,
 				5C9144AC22E23808005543E2 /* RepositoryAPI.swift in Sources */,
 				5C9144B122E23911005543E2 /* Combine.swift in Sources */,
+				5C9144B522E23E13005543E2 /* ItemResponse.swift in Sources */,
 				5C31A89F22DE75E800600208 /* MainViewModel.swift in Sources */,
+				5C9144B722E23FA6005543E2 /* AnySubscription.swift in Sources */,
 				5C9144AF22E238B2005543E2 /* URLSession.swift in Sources */,
 				5C66622F22DE5FB800244AAB /* AppDelegate.swift in Sources */,
 				5C66623422DE5FB800244AAB /* GitHubSearch.xcdatamodeld in Sources */,
