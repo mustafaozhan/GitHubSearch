@@ -13,7 +13,23 @@ struct RepositoryView : View {
     let repository: Repository
     
     var body: some View {
-        Text("")
+        VStack(alignment: .leading) {
+            
+            HStack {
+                Image(systemName: "doc.text")
+                Text(repository.fullName)
+                    .bold()
+            }
+
+            repository.description
+                .map(Text.init)?
+                .lineLimit(nil)
+            
+            HStack {
+                Image(systemName: "star")
+                Text("\(repository.stargazersCount)")
+            }
+        }
     }
 }
 
