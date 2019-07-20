@@ -14,7 +14,7 @@ final class MainViewModel: BindableObject {
     
     typealias SearchRepositories = (String) -> AnyPublisher<Result<[Repository], ErrorResponse>, Never>
     
-    let didChange: AnyPublisher<MainViewModel, Never>
+    let willChange: AnyPublisher<MainViewModel, Never>
     private let _didChange = PassthroughSubject<MainViewModel, Never>()
     
     private let _searchWithQuery = PassthroughSubject<String, Never>()
@@ -35,7 +35,7 @@ final class MainViewModel: BindableObject {
     init<S: Scheduler>(searchRepositories: @escaping SearchRepositories = RepositoryAPI.search,
                        mainScheduler: S) {
         
-        self.didChange = _didChange.eraseToAnyPublisher()
+        self.willChange = _didChange.eraseToAnyPublisher()
         
         let response = _searchWithQuery
             .filter { !$0.isEmpty }

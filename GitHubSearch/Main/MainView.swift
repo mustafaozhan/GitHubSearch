@@ -21,7 +21,7 @@ struct MainView : View {
                 
                 HStack {
                     
-                    TextField($viewModel.text, placeholder: Text("Search Reposipories"))
+                    TextField("Search Reposipories", text: $viewModel.text)
                         .frame(height: 40)
                         .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                         .border(Color.gray, cornerRadius: 8)
@@ -37,8 +37,7 @@ struct MainView : View {
                 }
                 
                 List {
-                    
-                    ForEach(viewModel.repositories.identified(by: \.id)) { repository in
+                    ForEach(viewModel.repositories, id: \.id){ repository in
                         RepositoryView(repository: repository)
                     }
                 }
