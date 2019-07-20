@@ -29,16 +29,25 @@ struct MainView : View {
                     
                     Button(action: { self.viewModel.search() }) {
                         Text("Search")
-                        }
-                        .frame(height: 40)
+                    }
+                    .frame(height: 40)
                         .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                         .border(Color.blue, cornerRadius: 8)
                         .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 16))
                 }
                 
                 List {
+                    viewModel.errorMessage.map(Text.init)?
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.center)
+                    
                     ForEach(viewModel.repositories, id: \.id){ repository in
-                        RepositoryView(repository: repository)
+                        
+                        NavigationLink(destination: WebView(url: repository.htmlUrl)
+                            .navigationBarTitle(repository.fullName))
+                        {
+                            RepositoryView(repository: repository)
+                        }
                     }
                 }
             }
